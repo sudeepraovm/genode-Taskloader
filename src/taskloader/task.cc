@@ -672,10 +672,10 @@ void Task::Child_destructor_thread::entry()
 			_lock.unlock();
 			//_timer.msleep(100);
 			Genode::log("Destroying task %s", task->_name.c_str());
-			int time_before=_timer.elapsed_ms();
+			//int time_before=_timer.elapsed_ms();
 			Genode::destroy(task->_shared.heap, task->_meta);
 			task->_meta = nullptr;
-			Genode::log("Done Destruction. Took: %d",_timer.elapsed_ms()-time_before);
+			//Genode::log("Done Destruction. Took: %d",_timer.elapsed_ms()-time_before);
 		}
 		_lock.unlock();
 		

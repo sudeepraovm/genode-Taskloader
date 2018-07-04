@@ -261,7 +261,7 @@ protected:
 	private:
 		Genode::Lock _lock;
 		std::list<Task*> _queued;
-		static Timer::Connection _timer;
+		//static Timer::Connection _timer;
 
 		void entry() override;
 	};
@@ -276,7 +276,7 @@ protected:
 	private:
 		Genode::Lock _lock;
 		std::list<Task*> _queued;
-		static Timer::Connection _timer;
+		//static Timer::Connection _timer;
 
 		void entry() override;
 	};
